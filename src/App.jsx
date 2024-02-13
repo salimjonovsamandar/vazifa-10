@@ -1,14 +1,12 @@
-
-import './App.css'
-import Conkulyator from '../src/components/Conkulyator'
+import "./App.css";
+import Card from "./assets/component/Card";
 
 function App() {
-
   return (
     <>
-      <Conkulyator />
+      <Card />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
