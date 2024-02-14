@@ -3,13 +3,13 @@
   position: relative;
 }
 .leftbgcolor {
-  background-color: blue;
+  background-color: #1f3040;
   width: 50%;
   min-height: 100vh;
   margin-right: auto;
 }
 .rightbgcolor {
-  background-color: rgb(89, 89, 175);
+  background-color: #ff9442;
   width: 50%;
   min-height: 100vh;
   margin-left: auto;
@@ -22,4 +22,84 @@
   width: 90%;
   margin-top: 63px;
   padding: 60px 80px;
+  flex-wrap: wrap;
+}
+.mainpegs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.titles {
+  width: 700px;
+  font-size: 70px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.decs {
+  width: 700px;
+  font-size: 20px;
+  color: rgb(107, 104, 104);
+  font-weight: 900;
+  line-height: 35px;
+}
+.boyimg {
+  width: 400px;
+  margin-top: 35px;
+}
+.btn {
+  margin-top: 70px;
+}
+
+.HIRE {
+  border: 2px solid rgb(0, 0, 0);
+  padding: 10px 30px 10px 30px;
+  font-size: 16px;
+  font-weight: 700;
+  transition: all 0.5s;
+  margin-right: 30px;
+  &:hover {
+    color: white;
+    background-color: black;
+  }
+}
+.PROJECTS {
+  border: 2px solid rgb(0, 0, 0);
+  padding: 10px 30px 10px 30px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  transition: all 0.5s;
+  &:hover {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+  }
+}
+.navigation {
+  margin-top: -50px;
+}
+.header {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-top: -55px;
+  justify-content: end;
+}
+.nav {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+.nav ul {
+  list-style: none;
+}
+.nav ul a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  color: black;
+  transition: all 0.5s;
+}
+.nav ul a:hover{
+  color: red;
 }
