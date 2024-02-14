@@ -1,18 +1,26 @@
 import * as React from "react";
 import styles from "./index.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Boy from "../../../../public/boy.png";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import { Select } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 function index() {
-  const [language, setLanguage] = useState("");
+  const [language, setLanguage] = useState("uz");
+  const { t, i18n } = useTranslation();
 
-  const handleChange = (event) => {
-    setLanguage(event.target.value);
-    console.log(event.target.value);
-  };
+  useEffect(() => {
+    let language = localStorage.getItem("language");
+    if (language) {
+      i18n.changeLanguage(language);
+      setLanguage(language);
+    }
+  }, []);
+
+  function handleChange(e) {
+    setLanguage(e.target.value);
+    i18n.changeLanguage(e.target.value);
+    localStorage.setItem("language", e.target.value);
+  }
 
   return (
     <div className={styles.blocks}>
@@ -24,57 +32,45 @@ function index() {
           <div className={styles.nav}>
             <ul>
               <li>
-                <a href="#">About Me</a>
+                <a href="#">{t("About Me")}</a>
               </li>
             </ul>
             <ul>
               <li>
-                <a href="#">Skills</a>
+                <a href="#">{t("Skills")}</a>
               </li>
             </ul>
             <ul>
               <li>
-                <a href="#">Project</a>
+                <a href="#">{t("Project")}</a>
               </li>
             </ul>
             <ul>
               <li>
-                <a href="#">Contact</a>
+                <a href="#">{t("Contact")}</a>
               </li>
             </ul>
           </div>
 
           <div className={styles.darkmood}></div>
-
-          <div className="section">
-            <FormControl style={{ width: 80 }}>
-              <Select
-                labelId="language-select-label"
-                id="language-select"
-                value={language}
-                onChange={handleChange}
-              >
-                <MenuItem value="uz">O'zb</MenuItem>
-                <MenuItem value="en">Eng</MenuItem>
-                <MenuItem value="ru">Rus</MenuItem>
-              </Select>
-            </FormControl>
-          </div>
+          <select
+            value={language}
+            onChange={handleChange}
+            className={styles.section}
+          >
+            <option value="uz">O'zb</option>
+            <option value="ru">Rus</option>
+            <option value="en">Eng</option>
+          </select>
         </div>
 
         <div className={styles.mainpegs}>
           <div className="reference">
-            <h1 className={styles.titles}>
-              Hi 👋, <br /> I’m Charles, <br /> Front-end Developer
-            </h1>
-            <p className={styles.decs}>
-              I design and develop experiences that make people's lives simpler
-              through Web and Mobile apps.I work with FIgma , HTML5, CSS3,
-              JavaScript, React, ReactNative and Flutter.
-            </p>
+            <h1 className={styles.titles}>{t("titles")}</h1>
+            <p className={styles.decs}>{t("decs")}</p>
             <div className={styles.btn}>
-              <button className={styles.HIRE}>HIRE ME</button>
-              <button className={styles.PROJECTS}>SEE MY PROJECTS</button>
+              <button className={styles.HIRE}>{t("HIRE")}</button>
+              <button className={styles.PROJECTS}>{t("PROJECTS")}</button>
             </div>
           </div>
           <div className="image">

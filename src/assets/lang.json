@@ -1,0 +1,38 @@
+{
+  "uz": {
+    "translation": {
+      "About Me": "Haqida",
+      "Skills": "Ko'nikmalar",
+      "Project": "Loyiha",
+      "Contact": "Aloqa",
+      "titles": "Salom 👋,  Men Charlzman,  Front-end Developer",
+      "decs": "Men veb va mobil ilovalar orqali odamlarning hayotini soddalashtiradigan tajribalarni ishlab chiqaman va ishlab chiqaman. Men FIgma, HTML5, CSS3, JavaScript, React, ReactNative va Flutter bilan ishlayman.",
+      "HIRE": "ISHLASH",
+      "PROJECTS": "LOYIHALARIM"
+    }
+  },
+  "ru": {
+    "translation": {
+      "About Me": "Про",
+      "Skills": "Навыки",
+      "Project": "Проект",
+      "Contact": "Контакт",
+      "titles": "Привет 👋, Я Чарльз, фронтенд-разработчик.",
+      "decs": "Я проектирую и разрабатываю решения, которые упрощают жизнь людей c помощью веб- и мобильных приложений. Я работаю с FIgma, HTML5, CSS3, JavaScript, React, ReactNative и Flutter.",
+      "HIRE": "НАЙМИ МЕНЯ",
+      "PROJECTS": "МОИ ПРОЕКТЫ"
+    }
+  },
+  "en": {
+    "translation": {
+      "About Me": "About Me",
+      "Skills": "Skills",
+      "Project": "Project",
+      "Contact": "Contact",
+      "titles": "Hi 👋,  I’m Charles, Front-end Developer",
+      "decs": "I design and develop experiences that make people's lives simpler through Web and Mobile apps.I work with FIgma , HTML5, CSS3, JavaScript, React, ReactNative and Flutter",
+      "HIRE": "HIRE ME",
+      "PROJECTS": "SEE MY PROJECTS"
+    }
+  }
+}
