@@ -1,10 +1,19 @@
-import React from 'react'
-import styles from "./index.module.css";
-function index() {
-    return (
-        <div>
-            <p className={styles.loader}></p>
-        </div>
-    )
-}
-export default index
+import React from "react";
+import CircularProgress from "@mui/material/CircularProgress";
+
+const Loader = () => {
+  return (
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100vh",
+      }}
+    >
+      <CircularProgress color="primary" />
+    </div>
+  );
+};
+
+export default Loader;
