@@ -3,10 +3,12 @@ import styles from "./index.module.css";
 import { useState, useEffect } from "react";
 import Boy from "../../../../public/boy.png";
 import { useTranslation } from "react-i18next";
+import Loader from "../Loader";
 
 function index() {
   const [language, setLanguage] = useState("uz");
   const { t, i18n } = useTranslation();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     let language = localStorage.getItem("language");
@@ -14,6 +16,9 @@ function index() {
       i18n.changeLanguage(language);
       setLanguage(language);
     }
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
   }, []);
 
   function handleChange(e) {
@@ -21,7 +26,9 @@ function index() {
     i18n.changeLanguage(e.target.value);
     localStorage.setItem("language", e.target.value);
   }
-
+  if (loading) {
+    return <Loader />;
+  }
   return (
     <div className={styles.blocks}>
       <div className={styles.leftbgcolor}></div>
